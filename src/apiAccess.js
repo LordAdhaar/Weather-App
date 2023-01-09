@@ -31,7 +31,7 @@ export async function getForecast(lon,lat,units){
 }
 
 export async function getAirQuality(lon,lat,startDT,endDT){
-    let response = await fetch(`http://api.openweathermap.org/data/2.5/air_pollution/history?lat=${lat}&lon=${lon}&start=${startDT}&end=${endDT}&appid=977abd9866a33361f1633cf4f895d67e`)
+    let response = await fetch(`https://api.openweathermap.org/data/2.5/air_pollution/history?lat=${lat}&lon=${lon}&start=${startDT}&end=${endDT}&appid=977abd9866a33361f1633cf4f895d67e`)
     let data = await response.json();
 
     return data.list[0].main.aqi
