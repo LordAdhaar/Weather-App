@@ -6,11 +6,11 @@ const place = document.getElementById("place");
 const date = document.getElementById("date");
 const time = document.getElementById("time");
 const currTemp = document.getElementById("currTemp");
-const feelsLike = document.querySelector("div#feelsLike>h1");
-const humidity = document.querySelector("div#humidity>h1");
-const rain = document.querySelector("div#rain>h1");
-const wind = document.querySelector("div#wind>h1");
-const aqiData = document.querySelector("div#aqi>h1");
+const feelsLike = document.querySelector("div#feelsLike>h2");
+const humidity = document.querySelector("div#humidity>h2");
+const rain = document.querySelector("div#rain>h2");
+const wind = document.querySelector("div#wind>h2");
+const aqiData = document.querySelector("div#aqi>h2");
 let tempUnit = "°C";
 let windUnit = "km/h";
 const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
@@ -24,7 +24,7 @@ export async function setWeatherDetails(){
     
         console.log(data)
         
-        if(this.id==="metric"){
+        if( this===undefined ||this.id==="metric" ){
             units = "metric";
             tempUnit = "°C";
             windUnit = "km/h";
@@ -44,7 +44,7 @@ export async function setWeatherDetails(){
         setDaily(foreCastData);
     }
     catch(err){
-        alert(err);
+        alert("Please Enter a Valid City");
         console.log(err);
     }
     
@@ -59,7 +59,7 @@ function setGeneralDetails(foreCastData,data,aqi){
     //set generalDescription
     description.textContent = foreCastData.current.weather[0].description;
     place.textContent = data.name;
-    date.textContent = weekday[todayDate.getDay()] + ", " + timeConverter(data.dt);
+    date.textContent = weekday[todayDate.getDay()] + "\r\n" + timeConverter(data.dt);
     currTemp.textContent = Math.round(foreCastData.current.temp) +  " "+tempUnit ;
 
     //set specifics
@@ -104,8 +104,8 @@ function setDaily(foreCastData){
         let dayName = weekday[dayOf.getDay()];
 
         dayNameHTML.textContent = dayName;
-        maxTempHTML.textContent = foreCastData.daily[i].temp.max + " " + tempUnit;
-        minTempHTML.textContent = foreCastData.daily[i].temp.min + " " + tempUnit;
+        maxTempHTML.textContent = Math.round(foreCastData.daily[i].temp.max) + " " + tempUnit;
+        minTempHTML.textContent = Math.round(foreCastData.daily[i].temp.min) + " " + tempUnit;
 
         console.log(dayName);
         console.log(dayHTML);

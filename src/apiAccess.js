@@ -6,7 +6,7 @@ export async function getCoordinates(){
         let cityName = searchBar.value;
 
         if(cityName === ""){
-            cityName="Dwarka";
+            cityName="Shillong";
         }
         
 

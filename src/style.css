@@ -1,5 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 body{
     background-color: burlywood;
-    font-family: sans-serif;
+    font-family: montserrat,sans-serif;
+    min-height: 100vh;
+    margin: 0px;
+    background-image: url("./img/1933080.jpg");
+    background-size: cover;
+    color: white;
 
+/*    -webkit-filter: blur(8px); 
+    filter: blur(8px);*/
+}
+
+#container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+    padding: 0px 60px;
+}
+
+#description{
+    margin-bottom: 0px;
+}
+
+#place{
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-weight: 400;
+}
+
+#date{
+    margin-top: 10px;
+    margin-bottom: 0px;
+    white-space: pre;
+    font-weight: 400;
+}
+
+#currTemp{
+    margin-top: 15px;
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+#metric,#imperial{
+    margin-bottom: 10px;
+    background: #ffffff00;
+    border: 0px;
+    padding: 0px;
+    color: white;
+} 
+
+#searchBar{
+    background: none;
+    border: 0pc;
+    border-bottom: 2px solid white;
+    color: white;
+}
+
+#searchButton{
+    background: none;
+    border: 2px solid white;
+    color: white;
+    border-radius: 100px;
+}
+
+#metric{
+    padding: 1px 6px;
+    border-right: 2px solid white;
+}
+
+#moreInfo{
+    text-align: right;
+}
+
+#moreInfo h4{
+    margin-bottom: 0px;
+    font-weight: 400;
+}
+
+#moreInfo h2{
+    margin-top: 10px;
+}
+
+#daily{
+    display: flex;
+    grid-column: 1/3;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#daily h3, #daily h2{
+    font-weight: 400;
 }

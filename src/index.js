@@ -8,7 +8,7 @@ const celBtn = document.getElementById("metric");
 const fahBtn = document.getElementById("imperial");
 
 console.log(celBtn,fahBtn);
-
+setWeatherDetails();
 celBtn.addEventListener("click",setWeatherDetails);
 fahBtn.addEventListener("click",setWeatherDetails);
 
