@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/LordAdhaar/Weather-App/issues"
   },
-  "homepage": "https://github.com/LordAdhaar/Weather-App",
+  "homepage": "https://github.com/LordAdhaar/Weather-App#readme",
   "devDependencies": {
     "css-loader": "^6.7.3",
     "html-webpack-plugin": "^5.5.0",
