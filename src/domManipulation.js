@@ -97,8 +97,9 @@ function setDaily(foreCastData){
 
         let dayHTML = document.getElementById(`${i}`);
         let dayNameHTML = dayHTML.children[0];
-        let maxTempHTML = dayHTML.children[1];
-        let minTempHTML = dayHTML.children[2];
+        let dailyTempHTML = dayHTML.children[1];
+        let maxTempHTML = dailyTempHTML.children[0];
+        let minTempHTML = dailyTempHTML.children[1];
 
         let dayOf = new Date(timeConverter(foreCastData.daily[i].dt))
         let dayName = weekday[dayOf.getDay()];
